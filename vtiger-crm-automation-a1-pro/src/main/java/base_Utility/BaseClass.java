@@ -16,7 +16,6 @@ import org.testng.annotations.BeforeSuite;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import generic_utility.FileUtility;
 import generic_utility.WebDriverUtility;
@@ -32,20 +31,20 @@ public class BaseClass {
 	
 	@BeforeSuite
 	public void repConfig() {
-		
-		//Report Configuration.means project level
-		
-		long time = System.currentTimeMillis();
-		ExtentSparkReporter spark = new ExtentSparkReporter("ad_reports/"+time+".html");
-		spark.config().setDocumentTitle("VTiger Maven Project");
-		spark.config().setReportName("Project Report");
-		spark.config().setTheme(Theme.DARK);
-		
-		report = new ExtentReports();
-		report.attachReporter(spark);
-		report.setSystemInfo("ATE", "Arunendra");
-		report.setSystemInfo("Browser", "edge");
-		report.setSystemInfo("window", "11");
+//		
+//		//Report Configuration.means project level
+//		
+//		long time = System.currentTimeMillis();
+//		ExtentSparkReporter spark = new ExtentSparkReporter("ad_reports/"+time+".html");
+//		spark.config().setDocumentTitle("VTiger Maven Project");
+//		spark.config().setReportName("Project Report");
+//		spark.config().setTheme(Theme.DARK);
+//		
+//		report = new ExtentReports();
+//		report.attachReporter(spark);
+//		report.setSystemInfo("ATE", "Arunendra");
+//		report.setSystemInfo("Browser", "edge");
+//		report.setSystemInfo("window", "11");
 	}
 	
 	
@@ -119,7 +118,7 @@ public class BaseClass {
 	public void repBackUp() {
 	
 		//Report BackUp
-		report.flush();
+//		report.flush();
 	}
 
 }
